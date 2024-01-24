@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <div>
+        <form method="post" action="/text">
+            <div>
+                <input type="text" placeholder="title" name="title" id="title">
+                
+            </div>
+
+            <div>
+                <textarea name="description" id="description" cols="30" rows="10" placeholder="Description"></textarea>
+                <button type="submit">submit</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}

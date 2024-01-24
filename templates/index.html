@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    
+    <table class="table">
+        <tr>
+            <!-- <th>ID</th> -->
+            <th>User-name</th>
+            <th>User-id</th>
+            <th>Title</th>
+            <th>Code-ID</th>
+           
+        </tr>
+
+        
+        {% for user in rows %}
+            <tr>
+                <td>{{user.username}}</td>
+                <td>{{user.id}}</td>
+                <td>{{user.title}}</td>
+                <td><a href="/static/{{user.filename}}">{{user.code_id}}</a></td>
+            </tr>
+        {% endfor %}
+        
+
+        
+  </table>
+{% endblock%}
